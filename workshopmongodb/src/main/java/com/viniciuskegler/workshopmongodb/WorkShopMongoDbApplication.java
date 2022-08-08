@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class WorkshopmongodbApplication {
+public class WorkShopMongoDbApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(WorkshopmongodbApplication.class, args);
+		SpringApplication.run(WorkShopMongoDbApplication.class, args);
 	}
 
 }
