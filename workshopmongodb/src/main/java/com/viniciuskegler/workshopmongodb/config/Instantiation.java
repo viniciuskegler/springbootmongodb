@@ -36,8 +36,11 @@ public class Instantiation implements CommandLineRunner{
 		
 		postRepo.deleteAll();	
 		Post post1 = new Post(null, sdf.parse("21/03/2018"), "Partiu viagem", "Vou viajar para São Paulo. Abraços!", new AuthorDTO(maria));
-		Post post2 = new Post(null, sdf.parse("21/03/2018"), "Bom dia", "Acordei feliz hoje!", new AuthorDTO(maria));
+		Post post2 = new Post(null, sdf.parse("21/03/2018"), "Bom dia", "Acordei feliz hoje!", new AuthorDTO(maria)		);
 		postRepo.saveAll(List.of(post1, post2));
+	
+		maria.getPosts().addAll(List.of(post1, post2));
+		userRepo.save(maria);
 	}
 
 }
